@@ -1,0 +1,35 @@
+.Nav{
+    display: flex;
+    height: 75px;
+    width: 100%;
+    flex-direction: row;
+    background-color: rgb(32, 32, 32);
+}
+.container_nav{
+    display: flex;
+    flex-direction: row;
+    height: 75px;
+    width: 45vw;
+    margin: 0;
+}
+#firt_container_nav{
+
+    justify-content: baseline;
+    align-items: center;
+    padding-left: 50px;
+}
+#second_container_nav{
+    justify-content: end;
+    align-items: center;
+    padding-right: 50px;
+    gap: 25px;
+}
+
+.container_nav h1{
+    color: white;
+    margin: 0;
+
+}
+.container_nav h3{
+    color: white;
+}

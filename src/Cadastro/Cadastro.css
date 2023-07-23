@@ -1,0 +1,25 @@
+.Cadastro{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ width: 100%;
+ height: 100%;
+}
+
+.Cadastro .table{
+    width: 80vw;
+}
+.observacao{
+    width: 80vw;
+}
+.observacao input{
+    width: 100%;
+}
+.botoes_cadastro{
+    display: flex;
+    width: 80vw;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+}

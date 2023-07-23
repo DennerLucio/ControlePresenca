@@ -1,0 +1,84 @@
+.Classes{
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../assets/texture-background.jpg');
+   
+}
+.Barra_Class{
+    display: flex;
+    flex-direction: row;
+    width: 85vw;
+    height: 150px;
+    background-color: rgb(255, 255, 255);
+    justify-content: space-around;
+    border-radius: 7px 7px 7px 7px;
+    margin: 20px 0px 0px 0px;
+    box-shadow: 2px 4px 0px 0px #68686667;
+
+}
+.Grupo_Class{
+    display: flex;   
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+
+}
+#GC1{
+    align-items: baseline;
+}
+.Grupo_Class div{
+    display: flex;
+    flex-wrap: wrap;
+    
+
+}
+.Grupo_Class span{
+    color: black ;
+}
+
+.Grupo_Class div ul{
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+}
+.Grupo_Class div ul li{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+   
+}
+
+.btclasses{
+    margin-top: 20px;
+    width: 85vw;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    justify-content: end;
+    align-items: center;
+    
+
+}
+.identificadores{
+   width: 100px;
+   height: 40px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-right: 5px;
+   text-decoration: none;
+}
+#identificador_maior{
+   width: auto; 
+
+}

@@ -1,0 +1,12 @@
+.Barra_Cad{
+ width: 80vw;
+ height: 100px;   
+ display: flex;
+ background-color: rgb(134, 134, 134);
+ justify-content: space-around;
+ align-items: center;
+}
+.Barra_Cad div{
+    display: flex;
+    gap: 5px;
+}

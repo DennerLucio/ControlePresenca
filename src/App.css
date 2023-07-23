@@ -1,0 +1,23 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  
+}
+
+body , p , a, ul, label{
+  font: 500 18px Roboto, sans-serif;
+}
+
+
+h1{
+  font: 400 48px Gugi;
+
+
+}
+.font_principal{
+  font: 600 21px Commissioner, sans-serif;
+}
+.font_secundaria{
+  font: 300 18px Commissioner, sans-serif;
+}
