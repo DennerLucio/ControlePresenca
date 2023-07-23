@@ -1,4 +1,5 @@
 import './Nav.css'
+import { Link } from 'react-router-dom'
 import { Button00 } from '../Utilitario/Botoes/Button00'
 export function Nav() {
     
@@ -6,7 +7,9 @@ export function Nav() {
     return (
       <div className="Nav">
         <div className='container_nav' id='firt_container_nav'>
-          <h1>MADENN</h1>
+          <Link to='/' className="" >
+            <h1 id='logo'>MADENN</h1>
+            </Link> 
         </div>
         <div className='container_nav' id='second_container_nav'>
            <h3>Fulano</h3>

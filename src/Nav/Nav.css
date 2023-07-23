@@ -33,3 +33,7 @@
 .container_nav h3{
     color: white;
 }
+.container_nav a{
+    text-decoration: none;
+
+}
