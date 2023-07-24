@@ -7,7 +7,7 @@ export function Classes() {
   const [res, setRes] = useState([])
   const getRes = async () => {
     try{
-      const response = await axios.get("https://localhost:5001/Classe")
+      const response = await axios.get("https://localhost:5001/alunos")
       const data = response.data     
       setRes(data)
 

@@ -11,7 +11,7 @@ export function Relatorio({ }) {
   const [mesSelecionado, setMesSelecionado] = useState("");
   const [dataFormatada, setDataFormatada] = useState("");
   const [classeFinal, setClasseFinal] = useState("");
-  
+  var teste = 4
 
   function trocaClasse(event) {
    setClasseSelecionado(event.target.value);
@@ -28,16 +28,51 @@ export function Relatorio({ }) {
   
   function Pesquisar(e) {
     e.preventDefault()
-    if (mesSelecionado !== "" || ano!=="" ) {
-      setDataFormatada(ano+"-"+mesSelecionado+"-01")
-    }else{
-      setDataFormatada("")
+    setDataFormatada("")
+
+    if (mesSelecionado === "" && ano !== "" || ano === "" && mesSelecionado !== "") {
       alert("Ano ou Mes não preenchidos")
+      setDataFormatada("")
+    } 
+    if (mesSelecionado !== "" && ano !== "" ) {
+      setDataFormatada(ano+"-"+mesSelecionado+"-01")
     }
+     
+    
+
+
+
     setClasseFinal(classeSelecionado)
    
   }
 
+
+
+
+// // Função para verificar se a data é maior que a data atual
+// function isDateGreaterThanToday(userInputDate) {
+//   const currentDate = new Date();
+//   const userDate = new Date(userInputDate);
+
+//   return userDate > currentDate;
+// }
+
+// // Exemplo de uso:
+// const userDateInput = "2023-07-30"; // Substitua pela data recebida do front-end
+
+// if (isDateGreaterThanToday(userDateInput)) {
+//   console.log("A data é maior que a data atual.");
+// } else {
+//   console.log("A data não é maior que a data atual.");
+// }
+
+
+
+
+
+
+
+  
 
   const [res, setRes] = useState([])
 
@@ -47,7 +82,6 @@ export function Relatorio({ }) {
     try{
       const response = await axios.get(`https://localhost:5001/Relatorio?classeId=${classeFinal}&data=${dataFormatada}`) 
       
-
       const data = response.data
       setRes(data)
 
@@ -63,7 +97,7 @@ export function Relatorio({ }) {
         <div className='filtro_relatorios'>
           <form onSubmit={Pesquisar}>
           <div className='grupo_relatorios'>
-          <h3>{classeFinal} Classe:{dataFormatada} </h3>
+          <h3>Classe: </h3>
           <select  name='classeSelecionado' value={classeSelecionado} onChange={trocaClasse}>
             <option value=""> Geral</option>
             <option value="1"> Classe 1</option>
@@ -121,7 +155,7 @@ export function Relatorio({ }) {
             </tr>
           </thead>
           <tbody>
-           {res.slice(0,5).map((resposta) => {
+           {res.slice(0,teste).map((resposta) => {
           return(
             <tr key={resposta.relatorioId}>
               <th scope="row">{resposta.id}</th>
