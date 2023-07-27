@@ -1,7 +1,6 @@
 import './Relatorio.css'
 import axios from "axios"
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom';
 import { Button00 } from '../Utilitario/Botoes/Button00';
 
 export function Relatorio({ }) {
@@ -65,24 +64,25 @@ export function Relatorio({ }) {
 // } else {
 //   console.log("A data não é maior que a data atual.");
 // }
-
-
-
-
-
-
-
   
 
   const [res, setRes] = useState([])
 
+  const [res2,setRes2 ] = useState([])
+
   const getRes = async () => {
 
-
     try{
-      const response = await axios.get(`https://localhost:5001/Relatorio?classeId=${classeFinal}&data=${dataFormatada}`) 
+
+      const requests = [axios.get(`https://localhost:5001/Relatorio?classeId=${classeFinal}&data=${dataFormatada}`),axios.get("https://localhost:5001/Classe")  ]
+      const [resposta1, resposta2 ] = await Promise.all(requests)
       
-      const data = response.data
+
+      const data2 = resposta2.data
+      setRes2(data2)
+
+
+      const data = resposta1.data
       setRes(data)
 
     }catch(error){
@@ -99,13 +99,19 @@ export function Relatorio({ }) {
           <div className='grupo_relatorios'>
           <h3>Classe: </h3>
           <select  name='classeSelecionado' value={classeSelecionado} onChange={trocaClasse}>
-            <option value=""> Geral</option>
-            <option value="1"> Classe 1</option>
-            <option value="2"> Classe 2</option>
-            <option value="3"> Classe 3</option>
-            <option value="4"> Classe 4</option>
+          <option value=""> Geral</option>
+          {res2.slice(0,5).map((resposta) => {
+          return(  
+            <option key={resposta.id} value={resposta.id}> {resposta.nome} </option>              
+           
+            )
+            })}
+
+
+            </select>
             
-          </select>
+            
+         
 
           </div>
           
@@ -147,23 +153,19 @@ export function Relatorio({ }) {
       <div className='linha_corpo'>
         <table className="table">
           <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">First</th>
-              <th scope="col">Last</th>
-              <th scope="col">Handle</th>
+            <tr className='linha_titulo_table'>
+              <th  className='celula_table2' scope="col">Nome</th>
+              <th  className='celula_table2' scope="col">Data</th>
+              <th  className='celula_table2' scope="col">Visualizar</th>
             </tr>
           </thead>
           <tbody>
            {res.slice(0,teste).map((resposta) => {
           return(
-            <tr key={resposta.relatorioId}>
-              <th scope="row">{resposta.id}</th>
-              <td>{resposta.data}</td>
-              <td>{resposta.data}</td>
-              <td>{resposta.data}</td>
-              
-              <td><Button00 texto='visualizar relatório' endereco='/relatoriopessoal'/></td>
+            <tr className='linha_corpo_table' key={resposta.relatorioId}>
+              <td className='celula_table'>{resposta.nomeClasse}</td>
+              <td className='celula_table'>{resposta.data}</td>
+              <td className='celula_table' id='bt_visualizar_relatorio'><Button00 texto='visualizar relatório' endereco='/relatoriopessoal'/></td>
             </tr>
             )
             })}

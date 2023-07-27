@@ -34,7 +34,7 @@
 .linha_corpo{
     display: flex;
     flex-direction: column;
-    width: 350px;
+    width: 700px;
     height: 500px;
     background-color: rgb(255, 255, 255);
     gap: 5px;
@@ -46,4 +46,35 @@
     display: flex;
     flex-direction: row;
 
+
+    
+}
+.celula_table{
+    
+    vertical-align: middle;
+   
+
+}
+.celula_table2{
+    text-align: center;
+    vertical-align: middle;
+   
+
+
+}
+#bt_visualizar_relatorio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+
+.linha_titulo_table{
+    background-color: rgb(238, 238, 238);
+   
+}
+.linha_corpo_table{
+    background-color: rgb(248, 248, 248);
 }
