@@ -14,9 +14,7 @@ export function Relatorio({ }) {
 
   function trocaClasse(event) {
    setClasseSelecionado(event.target.value);
-      
   }
-
   function handleSelectChange(event) {
     setMesSelecionado(event.target.value);
    
@@ -24,7 +22,6 @@ export function Relatorio({ }) {
   function trocaAno(e) {
     setAno(e.target.value)
   }
-  
   function Pesquisar(e) {
     e.preventDefault()
     setDataFormatada("")
@@ -36,14 +33,8 @@ export function Relatorio({ }) {
     if (mesSelecionado !== "" && ano !== "" ) {
       setDataFormatada(ano+"-"+mesSelecionado+"-01")
     }
-     
-    
-
-
-
     setClasseFinal(classeSelecionado)
-   
-  }
+   }
 
 
 
@@ -65,6 +56,11 @@ export function Relatorio({ }) {
 //   console.log("A data não é maior que a data atual.");
 // }
   
+
+
+
+
+
 
   const [res, setRes] = useState([])
 
@@ -98,11 +94,11 @@ export function Relatorio({ }) {
           <form onSubmit={Pesquisar}>
           <div className='grupo_relatorios'>
           <h3>Classe: </h3>
-          <select  name='classeSelecionado' value={classeSelecionado} onChange={trocaClasse}>
-          <option value=""> Geral</option>
+          <select className='selects' name='classeSelecionado' value={classeSelecionado} onChange={trocaClasse}>
+          <option className='options' value=""> Geral</option>
           {res2.slice(0,5).map((resposta) => {
           return(  
-            <option key={resposta.id} value={resposta.id}> {resposta.nome} </option>              
+            <option className='options' key={resposta.id} value={resposta.id}> {resposta.nome} </option>              
            
             )
             })}
@@ -116,6 +112,13 @@ export function Relatorio({ }) {
           </div>
           
           <div className='grupo_relatorios'>
+
+        
+       
+     
+            
+
+
           <h3>Mês: {mesSelecionado}</h3>
           <select value={mesSelecionado} onChange={handleSelectChange}>
             <option value=""> selecione</option>

@@ -84,3 +84,16 @@
     padding-left: 30px;
     text-align: left;
 }
+.selects{
+
+    border: solid 1px rgb(211, 211, 211);
+    border-radius: 5px;
+
+
+
+}
+
+.options{
+    border: solid 1px rgb(238, 237, 237);
+    border-radius: 2px;
+}
