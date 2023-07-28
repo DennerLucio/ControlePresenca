@@ -154,18 +154,18 @@ export function Relatorio({ }) {
         <table className="table">
           <thead>
             <tr className='linha_titulo_table'>
-              <th  className='celula_table2' scope="col">Nome</th>
+              <th  className='celula_table2' id='titulo_esquerda' scope="col">Nome</th>
               <th  className='celula_table2' scope="col">Data</th>
-              <th  className='celula_table2' scope="col">Visualizar</th>
+              <th  className='celula_table2' scope="col">Exibir</th>
             </tr>
           </thead>
           <tbody>
            {res.slice(0,teste).map((resposta) => {
           return(
             <tr className='linha_corpo_table' key={resposta.relatorioId}>
-              <td className='celula_table'>{resposta.nomeClasse}</td>
+              <td className='celula_table' id='celula_esquerda'>{resposta.nomeClasse}</td>
               <td className='celula_table'>{resposta.data}</td>
-              <td className='celula_table' id='bt_visualizar_relatorio'><Button00 texto='visualizar relatório' endereco='/relatoriopessoal'/></td>
+              <td className='celula_table' id='bt_visualizar_relatorio'><Button00 texto='visualizar' endereco='/relatoriopessoal'/></td>
             </tr>
             )
             })}
