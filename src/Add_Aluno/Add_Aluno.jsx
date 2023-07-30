@@ -1,15 +1,13 @@
 import { Button00 } from '../Utilitario/Botoes/Button00'
 import './Add_Aluno.css'
+import { Nav } from '../Nav/Nav'
 
 export function Add_Aluno() {
 
-
-
-
-    
   
     return (
       <div className="Add_Aluno">
+        <Nav />
         <h1>Adicionar Aluno/Visitante</h1>
         <div className='card_alunovisitante'>        
         <div>

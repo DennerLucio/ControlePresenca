@@ -1,10 +1,12 @@
 import './Cadastro.css'
 import { Barra_Cadastro } from '../Utilitario/Barras/Barra_Cadastro'
 import { Button00 } from '../Utilitario/Botoes/Button00'
+import { Nav } from '../Nav/Nav'
 
 export function Cadastro() {  
     return (
       <div className="Cadastro">
+        <Nav />
         <h1>Cadastrar Novo Relatorio</h1>
         <Barra_Cadastro />
 

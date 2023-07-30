@@ -2,6 +2,7 @@ import './Classes.css'
 import axios from "axios"
 import { useEffect, useState } from 'react'
 import { Button00 } from '../Utilitario/Botoes/Button00'
+import { Nav } from '../Nav/Nav'
 
 export function Classes() {
   const [res, setRes] = useState([])
@@ -23,7 +24,9 @@ export function Classes() {
   },[])
   
     return (
+      
       <div className="Classes">
+         <Nav />
          <div className='btclasses'>
           <Button00 texto='Cadastrar Pessoa' endereco='/cadastraaluno'/>
           <Button00 texto='Relatórios' endereco='/relatorios'/>

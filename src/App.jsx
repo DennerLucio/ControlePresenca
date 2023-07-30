@@ -2,7 +2,7 @@ import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 import { Classes } from './Classes/Classes.jsx'
-import { Nav } from './Nav/Nav.jsx'
+import { Login } from './Login/login.jsx'
 import { Routes, Route } from 'react-router-dom'
 import { Relatorio } from './Relatorios/Relatorio'
 import { Cadastro } from './Cadastro/Cadastro'
@@ -13,9 +13,10 @@ function App() {
 
   return (
     <div className="App">
-      <Nav />
+      
       <Routes>
-        <Route path='/' element={<Classes />} />
+        <Route path='/' element={<Login />} />
+        <Route path='/classes' element={<Classes />} />
         <Route path='/relatorios' element={<Relatorio />} />
         <Route path='/cadastro' element={<Cadastro />} />
         <Route path='/cadastraaluno' element={<Add_Aluno />} />

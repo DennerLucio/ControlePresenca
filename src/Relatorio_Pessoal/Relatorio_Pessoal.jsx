@@ -1,4 +1,6 @@
 import './Relatorio_Pessoal.css'
+import { Nav } from '../Nav/Nav'
+
 
 export function Relatorio_Pessoal() {
   const teste = "testetsettes"
@@ -9,6 +11,7 @@ export function Relatorio_Pessoal() {
   
     return (
       <div className="Add_Aluno">
+        <Nav />
         <h1>Visualizar Relatorio de: {teste} </h1>
         <div>
           

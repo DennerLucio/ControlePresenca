@@ -18,12 +18,7 @@
     align-items: center;
     transition: all ease 0.4s;
 }
-.button:hover{
-    
-    background-color:  rgb(0, 80, 252);
-    
- 
-}
+
 
 .teste{
     background-color: rgba(14, 14, 14, 0);
@@ -37,4 +32,14 @@
 
 .teste:hover a{
     color:rgb(0, 80, 252);    
+}
+
+.login_google{
+    background-color: #dc4e41;
+    width: 80%;
+
+
+}
+.login_enviar{
+    width: 80%;
 }

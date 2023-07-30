@@ -2,6 +2,7 @@ import './Relatorio.css'
 import axios from "axios"
 import { useEffect, useState } from 'react'
 import { Button00 } from '../Utilitario/Botoes/Button00';
+import { Nav } from '../Nav/Nav'
 
 export function Relatorio({ }) {
 
@@ -90,6 +91,7 @@ export function Relatorio({ }) {
     
     return (
       <div className="Relatorio">
+        <Nav />
         <div className='filtro_relatorios'>
           <form onSubmit={Pesquisar}>
           <div className='grupo_relatorios'>
